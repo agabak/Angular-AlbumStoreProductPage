@@ -50,11 +50,11 @@ describe('ProductPage', () => {
 
     const ProductPageFixture = TestBed.createComponent(ProductPageComponent);
 
-    since('You haven\'t added the `app-product-tracklisting` selector yet.').expect(ProductPageFixture.nativeElement.querySelector('app-product-tracklisting')).not.toBeNull()
-    since('You haven\'t added the `app-product-tracklisting` selector yet.').expect(ProductPageFixture.nativeElement.querySelector('app-product-tracklisting').nodeName).toBe('APP-PRODUCT-TRACKLISTING');    
+    since('You haven\'t added the `app-product-tracklisting` selector yet.').expect(ProductPageFixture.nativeElement.querySelector('app-product-tracklisting')).not.toBeNull();
+    since('You haven\'t added the `app-product-tracklisting` selector yet.').expect(ProductPageFixture.nativeElement.querySelector('app-product-tracklisting').nodeName).toBe('APP-PRODUCT-TRACKLISTING');
   }));
-  
-  
+
+
 });
 
 describe('ProductTracklisting', () => {
@@ -72,6 +72,7 @@ describe('ProductTracklisting', () => {
     const ProductTracklistingFixture = TestBed.createComponent(ProductTracklistingComponent);
 
     since('The ProductTracklistingComponent\'s HTML file doesn\'t contain a `div` tag with a class of `tracklisting` - have you moved it over from the ProductPageComponent yet?').expect(ProductTracklistingFixture.nativeElement.querySelectorAll('div.tracklisting').length).toBeGreaterThan(0);
-  }));
+    }));
 
+// tslint:disable-next-line:eofline
 });

@@ -49,5 +49,6 @@ describe('ProductDescription', () => {
 
     since('The ProductDescriptionComponent\'s HTML file doesn\'t contain a `div` tag with a class of `description` - have you moved it over from the ProductPageComponent yet?').expect(ProductDescriptionFixture.nativeElement.querySelector('div.description')).not.toBeNull();
   }));
-    
+
+// tslint:disable-next-line:eofline
 });

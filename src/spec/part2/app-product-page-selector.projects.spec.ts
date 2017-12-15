@@ -32,14 +32,14 @@ describe('AppComponent', () => {
 
     let productPageFound = 0, routerOutletFound = 0, productListFound = 0;
     childNodes.forEach(element => {
-      if (element.nativeNode.nodeType == 1) {
-        if (element.nativeNode.localName == 'router-outlet') {
+      if (element.nativeNode.nodeType === 1) {
+        if (element.nativeNode.localName === 'router-outlet') {
           routerOutletFound = routerOutletFound + 1;
         }
-        if (element.nativeNode.localName == 'app-product-list') {
+        if (element.nativeNode.localName === 'app-product-list') {
           productListFound = productListFound + 1;
         }
-        if (element.nativeNode.localName == 'app-product-page') {
+        if (element.nativeNode.localName === 'app-product-page') {
           productPageFound = productPageFound + 1;
         }
       }

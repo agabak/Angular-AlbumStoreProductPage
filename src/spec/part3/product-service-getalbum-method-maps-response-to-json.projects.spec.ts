@@ -21,7 +21,7 @@ try {
   productServiceExists = false;
 }
 
-let json = require('../../assets/album.json');
+const json = require('../../assets/album.json');
 
 describe('ProductService', () => {
 
@@ -52,14 +52,14 @@ describe('ProductService', () => {
 
   it(`should map the result of get request to json with rxjs map function @product-service-getalbum-method-maps-response-to-json`, async(() => {
     mock_backend.connections.subscribe((connection: MockConnection) => {
-      let options = new ResponseOptions({
+      const options = new ResponseOptions({
         body: json
       });
       connection.mockRespond(new Response(options));
     });
-    if (product_service.getAlbum == undefined) {
+    if (product_service.getAlbum === undefined) {
       since('The ProductService doesn\'t have a method named `getAlbum()` yet.').expect(0).toBe(1);
-    } else if (product_service.getAlbum != undefined && product_service.getAlbum(1) == undefined) {
+    } else if (product_service.getAlbum !== undefined && product_service.getAlbum(1) === undefined) {
       since('The `getAlbum()` method exists, but it\'s not returning the result of a call to `this._http.get()` and passing `this._albumUrl` as a parameter.').expect(0).toBe(1);
     } else {
       product_service.getAlbum(null).subscribe((response) => {
